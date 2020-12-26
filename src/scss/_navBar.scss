@@ -1,0 +1,46 @@
+
+.container{
+
+    &--padd{
+            padding-top:1rem;
+            padding-bottom:1rem;
+    }
+}
+
+// Flexbox
+.flex{
+    display:flex;
+    &-jc-sb{
+        justify-content: space-between; 
+    }
+    &-ai-c{
+        align-items: center;
+    }
+}
+
+.navBar{
+    font-family: 'Roboto', sans-serif;
+    padding-top: 1.0625rem;
+    padding-bottom: 1.0625rem;
+    position: relative;
+
+    &__brand{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    &__logo{
+            width:3.7rem;
+            height:auto;
+            margin-right:1.25rem;
+    }
+
+    &__links{
+        position:relative;
+        font-size: 1.125rem;
+
+        p{
+            margin-right:1.875rem;
+        }
+    }
+}
