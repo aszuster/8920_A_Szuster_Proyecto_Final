@@ -1,7 +1,7 @@
 import React from "react"
 import NavBar from './NavBar'
 import ItemListContainer from './ItemListContainer'
-import Contador from './Contador'
+import ItemCount from './ItemCount'
 import "./dist/styles.css"
 
 
@@ -11,7 +11,7 @@ const App = function(){
     <div className="container">
     <NavBar/>
     <ItemListContainer/>
-    <Contador/>
+    <ItemCount/>
     <footer>
       <p>&copy; Copyright 2020</p>
     </footer>
