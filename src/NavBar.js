@@ -1,5 +1,6 @@
 import React from "react"
 import logo from './katsudon_logo.svg'
+import CartWidget from './CartWidget'
 
 
 const NavBar = function(){
@@ -14,6 +15,7 @@ const NavBar = function(){
         <p>Productos</p>
         <p>Contacto</p>
       </div>
+      <CartWidget/>
     </nav>
   )
 }
