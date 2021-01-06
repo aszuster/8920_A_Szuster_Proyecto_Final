@@ -70,4 +70,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.items__img {
+  width: 80px;
+  height: auto;
+}
 /*# sourceMappingURL=styles.css.map */

@@ -1,12 +1,16 @@
 import React from "react"
-import toy from './pelota.png'
 
-const Item = ({id,title,price,pictureUrl}) => {
+
+const Item = ({title, pictureUrl, desc}) => {
+
+
     return(
-        <div>
-            <img src={toy} className="product__image" alt="Juguete Pelota" />
-        </div>
+        <>
+            <h1>{title}</h1>
+            <img src={pictureUrl} className="items__img" alt="Juguete Pelota" />
+            <p>{desc}</p>
+        </>
         )
-  }
-  
+
+    }
   export default Item;
