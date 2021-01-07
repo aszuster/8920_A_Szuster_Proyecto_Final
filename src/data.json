@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Juguete pelota",
+        "pictureUrl": "pelota.png",
+        "desc": "Pequeña pelota para que su mascota juegue"
+    },
+    { 
+        "title": "Hueso",
+        "pictureUrl": "hueso.jpg",
+        "desc": "Hueso de hule para perro"
+    },
+    {
+        "title": "Plumero",
+        "pictureUrl": "plumero.jpg",
+        "desc": "Plumero para que el gato juegue"
+    }
+]

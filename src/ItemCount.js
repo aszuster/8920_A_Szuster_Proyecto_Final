@@ -20,7 +20,7 @@ const ItemCount = function(){
         <p>El contador va : {contador}</p>
           <button onClick={aumentarContador}>+</button>
           <button onClick={resetearContador}>resetear</button>
-          <button onClick={restarContador}>-</button>;
+          <button onClick={restarContador}>-</button>
       </>
   )};
 
