@@ -1,13 +1,14 @@
 import React from "react"
+import ItemList from './ItemList'
 
 const ItemListContainer = function(){
     return(
-        <>
-        <h1>Título de la lista</h1>
-        <p>Artículo 1</p>
-        <p>Artículo 2</p>
-        <p>Artículo 2</p>
-        </>
+        <div className="container">
+        <h1>Productos</h1>
+        <div className="container flex flex-f-s flex-ai-c itemsContainer">
+        <ItemList/>
+        </div>
+        </div>
     )
   }
   

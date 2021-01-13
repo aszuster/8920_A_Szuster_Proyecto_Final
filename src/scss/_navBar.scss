@@ -1,8 +1,14 @@
+.header{
+
+    width:100%;
+    background-color:#D4A787;
+
 .navBar{
     font-family: 'Roboto', sans-serif;
     padding-top: 1.0625rem;
     padding-bottom: 1.0625rem;
     position: relative;
+    color:#92140C;
 
     &__brand{
         font-size: 1.5rem;
@@ -19,6 +25,13 @@
         position:relative;
         font-size: 1.125rem;
 
+        a{
+            color:#92140C;
+            padding:0.625rem;
+            display:block;
+            text-align:center;
+        }
+
         p{
             margin-right:1.875rem;
         }
@@ -28,4 +41,6 @@
 .icon{
     width: 3.7rem;
     height: auto;
+}
+
 }

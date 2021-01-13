@@ -4,10 +4,15 @@ html{
 }
 
 body{
-    font-family: 'Public Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.3;
     margin: 0;
     padding: 0;
+    color:#B6174B;
+}
+
+a, a:visited, a:hover{
+    text-decoration: none;
 }
 
 .container{
@@ -29,4 +34,9 @@ body{
     &-ai-c{
         align-items: center;
     }
+
+    &-f-s{
+        justify-content: flex-start
+    }
 }
+

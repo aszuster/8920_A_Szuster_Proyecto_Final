@@ -1,21 +1,17 @@
 import React from "react"
+import { NavLink } from 'react-router-dom'
 
 
-const Item = ({item}) => {
+const Item = ({id, title, pictureUrl, categoryID}) => {
 
-
-    return(
-        item.map((items, i) => {
-            const images= require(`./img/${items.pictureUrl}`)
-            console.log(images);
             return(
-                <div key={i}>
-                <h1>{items.title}</h1>
-                <img src={images.default} className="items__img" alt="Juguete Pelota" />      
-                <p>{items.desc}</p>
-                </div>
+                <>
+                <h1>{title}</h1>
+                <img src={pictureUrl} className="items__img" />      
+                <NavLink to={`/item/${id}`} className="items__button">Ver más</NavLink> 
+                </>
             )
-        })
-    )
+        // })
+    // )
     }
   export default Item;

@@ -8,7 +8,9 @@ const ItemCount = function(){
   };
 
   const restarContador = () => {
-    setContador(contador - 1);
+    if(contador > 0){
+      setContador(contador - 1);
+    }
   };
 
   const resetearContador = () => {
@@ -17,7 +19,7 @@ const ItemCount = function(){
 
   return(     
       <>
-        <p>El contador va : {contador}</p>
+        <p>Cantidad : {contador}</p>
           <button onClick={aumentarContador}>+</button>
           <button onClick={resetearContador}>resetear</button>
           <button onClick={restarContador}>-</button>

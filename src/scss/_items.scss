@@ -1,7 +1,33 @@
 .items{
 
     &__img{
-        width:80px;
+        width:150px;
         height:auto;
+        padding-bottom:20px;
     }
+
+    &__Container{
+        width:200px;
+        height:250px;
+        display:block;
+        margin-right:20px;
+        padding: 10px;
+    }
+
+
+    &__button{
+        position:relative;
+        display: inline-block;
+        padding: 0.8rem 2.18rem;
+        background:#e6ccbe;
+        border-radius: 50px;
+        cursor: pointer;
+        border: 0;
+        color:#776274;
+        font-weight: 400;
+        transition: opacity 300ms ease-in-out;
+        overflow:hidden;
+    }
+
 }
+

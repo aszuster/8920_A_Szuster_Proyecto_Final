@@ -18,31 +18,26 @@ const ItemList = () => {
     useEffect(() => {
 
       getPromise(data).then(result => {
-          console.log(result);
           setItem(result);
       });
 
 
     },[])
 
-    return (
-        <section>
-          <h1>Listado de Productos</h1>
+    return(
+      item.map((items, i) => {
+          const images= require(`./img/${items.pictureUrl}`)
 
-          <Item item={item}/>
-          {/* {items.length > 0 ? (
-            items.map(items => {
-              return (
-                <div>
-                  <Item title={items.title} pictureUrl={items.pictureUrl} desc={items.desc}/>
-                </div>
-              );
-            })
-          ) : (
-            <p>No hay productos</p>
-          )} */}
-        </section>
-      )}
+      return (
+
+          <div key={i} className="items__Container flex-jc-sb">
+          <Item title={items.title} pictureUrl={images.default} desc={items.desc} id={items.id}/>
+          </div>
+
+      )
+    })
+    )
+    }
 
     
     export default ItemList

@@ -30,7 +30,7 @@ const ItemDetailContainer = () => {
     },  [id]);
 
         return(
-            <div className="itemDetailContainer">
+            <div className="container">
             { item ?
             <ItemDetail
              id={item.id}
