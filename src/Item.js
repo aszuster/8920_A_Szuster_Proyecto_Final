@@ -11,7 +11,5 @@ const Item = ({id, title, pictureUrl, categoryID}) => {
                 <NavLink to={`/item/${id}`} className="items__button">Ver más</NavLink> 
                 </>
             )
-        // })
-    // )
     }
   export default Item;

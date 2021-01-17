@@ -7,21 +7,19 @@ import { useParams } from "react-router-dom";
 const ItemDetailContainer = () => {
     
     const [ item, setItem ] = useState()
-    //hay que declararle algo a los useState porque si no es mala práctica, el valor inicial
     const [ image, setImage ] = useState({})
     const { id } = useParams()
 
     useEffect(() => {
         const promesa = new Promise((resolve, reject)=>{
         setTimeout(function(){
-            const i = data.find(product => product.id == id)
+            const i = data.find(product => product.id === id)
             resolve(i); 
         }, 2000);
         }
         )
         promesa.then(result => {
             setItem(result)
-            //imagen
             const img= require(`./img/${result.pictureUrl}`)
             setImage(img)
         }) 
