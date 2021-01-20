@@ -2,7 +2,7 @@ import React from "react"
 import { NavLink } from 'react-router-dom'
 
 
-const Item = ({id, title, pictureUrl, categoryID}) => {
+const Item = ({id, title, pictureUrl}) => {
 
             return(
                 <>
