@@ -3,7 +3,7 @@
         "id":"01",
         "title": "Pelota",
         "pictureUrl": "pelota.jpg",
-        "price" : "$300",
+        "price" : 300,
         "stock":10,
         "desc": "Pequeña pelota para que su mascota juegue",
         "categoryID" : "goma"
@@ -12,7 +12,7 @@
         "id":"02",
         "title": "Hueso",
         "pictureUrl": "hueso.jpg",
-        "price" :"$100",
+        "price" :100,
         "stock":20,
         "desc": "Hueso de hule para perro",
         "categoryID" : "goma"
@@ -21,7 +21,7 @@
         "id":"03",
         "title": "Peluche",
         "pictureUrl": "peluche.jpg",
-        "price" :"$200",
+        "price" :200,
         "stock":5,
         "desc": "Peluche para perro o gato",
         "categoryID" : "plushie"

@@ -37,6 +37,7 @@ const ItemDetailContainer = () => {
              image={image.default}
              desc={item.desc}
              stock={item.stock}
+             item={item}
              />
              :
              <h2>Loading</h2>}

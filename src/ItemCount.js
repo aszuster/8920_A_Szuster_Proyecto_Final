@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 const ItemCount = ({onAdd, addToCart, condicion, stock, inicial, item, id}) => {
   const [contador, setContador] = useState(inicial);
-
+  console.log(id);
   const aumentarContador = () => {
     if(contador < stock){
       setContador(contador + 1);
@@ -18,7 +18,7 @@ const ItemCount = ({onAdd, addToCart, condicion, stock, inicial, item, id}) => {
 
   const agregarCarrito = (contador, item, id) => {
     onAdd(contador);
-    addToCart(item, id);
+    addToCart(item, contador, id);
   }
 
 
@@ -29,10 +29,8 @@ const ItemCount = ({onAdd, addToCart, condicion, stock, inicial, item, id}) => {
           <button onClick={restarContador}>-</button>
           <br/>
           {condicion && 
-          <button onClick={ () => agregarCarrito() }>Agregar al Carrito</button>          
+          <button onClick={ () => agregarCarrito(contador, item, id) }>Agregar al Carrito</button>          
           }
-
-          
       </>
   )};
 

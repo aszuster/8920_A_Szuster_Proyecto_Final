@@ -31,7 +31,7 @@ const ItemList = () => {
       return (
 
           <div key={i} className="items__Container flex-jc-sb">
-          <Item title={items.title} pictureUrl={images.default} desc={items.desc} id={items.id}/>
+          <Item title={items.title} image={images.default} desc={items.desc} id={items.id}/>
           </div>
 
       )

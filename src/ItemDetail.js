@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react"
 import ItemCount from './ItemCount'
 import { CartContext } from './CartContext';
+import { Link } from 'react-router-dom';
 
 
 const ItemDetail = ({title, image, id, desc, price, item}) => {
@@ -21,13 +22,13 @@ const ItemDetail = ({title, image, id, desc, price, item}) => {
     return(
         <div>
         <h1>{title}</h1>
-        <img src={image} className="items__img" />      
+        <img src={image} className="items__img" alt={title} />      
         <p>{desc}</p>
         <p>{price}</p>
         <ItemCount stock={10} inicial={0} onAdd={onAdd} addToCart={addToCart} condicion={condicionBoton} id={id} item={item}/>
         <br/>
         {contadorDetail &&
-            <button>Comprar</button>
+            <button><Link to="/cart" >Comprar</Link></button>
         }
         </div>
     )

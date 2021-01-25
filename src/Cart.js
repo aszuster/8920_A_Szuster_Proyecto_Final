@@ -6,9 +6,11 @@ import { Link } from 'react-router-dom';
 
 const Cart = () =>{
     const { cart, emptyCart, total} = useContext(CartContext)
+    cart.map(item => console.log(item))
+    console.log(cart)
 
     return(
-        <div>
+        <div className="container">
             {cart.length > 0 ?(
             <h1>Comprar</h1>
             )
@@ -25,14 +27,14 @@ const Cart = () =>{
 
             <div>
                 {cart.length > 0 && cart.map (product => <CartItem key={product.id}
-                id = {product.id} name={product.name} image={product.image} price = {product.price}
+                id = {product.id} title={product.title} image={product.image} price = {product.price}
                 amount={product.amount} />
                 )}
-                </div>
+            </div>
 
-                {cart.length > 0 &&
-                <>
-                <h2>${total}</h2>
+            {cart.length > 0 &&
+            <>
+                <h2>Total: ${total}</h2>
                 <div>
                     <button onClick= {emptyCart}>
                         Sacar del carrito
@@ -41,8 +43,8 @@ const Cart = () =>{
                         Pagar
                     </button>
                 </div>
-                </>
-                }
+            </>
+            }
             
         </div>
     )

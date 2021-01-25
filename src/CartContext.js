@@ -9,10 +9,12 @@ export const CartContext = createContext();
     const [total, setTotal] = useState()
 
     useEffect(() => {
-        const t = 0;
+        var t = 0;
         const tot = cart.map(p => p.price * p.amount);
-        tot.map( p => t = t + p);
+        tot.map( p => t = t + p)
+
         setTotal(t);
+        console.log(tot)
         const cartQuantity = cart.length;
         setQuantity(cartQuantity);
     }, [cart])
@@ -28,17 +30,23 @@ const isInCart = (id) => {
 
 
 
+
+
+
+
+
+
 const addToCart = (product, counter, id) => {
     
     if (isInCart(id)){
         const oldProduct = cart.find(p => p.id === id);
         const newQuantity = oldProduct.amount + counter;
-        const newProduct = { id: oldProduct.id, name: oldProduct.name, image: oldProduct.image, price: oldProduct.price, amount:newQuantity}   
+        const newProduct = { id: oldProduct.id, title: oldProduct.title, image: oldProduct.pictureUrl, price: oldProduct.price, amount:newQuantity}   
         const cartWithoutOld = cart.filter(product => product.id =! id)
         const cartWithNew = [...cartWithoutOld, newProduct];
         setCart(cartWithNew);
     }else{
-        const newItem = {id: product.id, name:product.name, image: product.image, price: product.price, amount:counter}
+        const newItem = {id: product.id, title:product.title, image: product.pictureUrl, price: product.price, amount:counter}
         setCart([...cart, newItem]) 
     }
 }
