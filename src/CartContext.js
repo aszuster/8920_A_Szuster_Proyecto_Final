@@ -28,14 +28,6 @@ const isInCart = (id) => {
     }
 }
 
-
-
-
-
-
-
-
-
 const addToCart = (product, counter, id) => {
     
     if (isInCart(id)){

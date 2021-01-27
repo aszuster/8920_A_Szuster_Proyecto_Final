@@ -3,12 +3,12 @@ import ItemDetail from './ItemDetail'
 import data from './data.json';
 import { useParams } from "react-router-dom";
 
-
 const ItemDetailContainer = () => {
     
     const [ item, setItem ] = useState()
     const [ image, setImage ] = useState({})
     const { id } = useParams()
+      
 
     useEffect(() => {
         const promesa = new Promise((resolve, reject)=>{
