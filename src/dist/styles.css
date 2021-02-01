@@ -102,8 +102,8 @@ a, a:visited, a:hover {
 }
 
 .items__Container {
-  width: 200px;
-  height: 250px;
+  width: 300px;
+  height: 500px;
   display: block;
   margin-right: 20px;
   padding: 10px;

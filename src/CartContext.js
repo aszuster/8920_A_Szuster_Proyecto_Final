@@ -29,11 +29,14 @@ const isInCart = (id) => {
 }
 
 const addToCart = (product, counter, id) => {
-    
+    console.log("adding to cart", product)
+    debugger;
     if (isInCart(id)){
         const oldProduct = cart.find(p => p.id === id);
+        console.log("another unit of", oldProduct)
         const newQuantity = oldProduct.amount + counter;
-        const newProduct = { id: oldProduct.id, title: oldProduct.title, image: oldProduct.pictureUrl, price: oldProduct.price, amount:newQuantity}   
+        const newProduct = { id: oldProduct.id, title: oldProduct.title, image: oldProduct.image, price: oldProduct.price, amount:newQuantity}   
+        console.log("new product", newProduct)
         const cartWithoutOld = cart.filter(product => product.id =! id)
         const cartWithNew = [...cartWithoutOld, newProduct];
         setCart(cartWithNew);

@@ -21,7 +21,10 @@ const App = function(){
     <NavBar/>
     </header>
     <Switch>
-          <Route exact path="/">
+    <Route exact path="/">
+    <ItemListContainer/>
+    </Route>
+          <Route exact path="/category/:id">
     <ItemListContainer/>
     </Route>
     <Route exact path ="/item/:id">

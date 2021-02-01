@@ -5,12 +5,25 @@ export const DataContext = createContext();
 
     const DataProvider = ({ children }) => {
 
-        const [listOfItems,setListOfItems] =useState([]);
+        const [listOfItems,setListOfItems] = useState([]);
+        const [juguetes, setJuguetes] = useState([]);
 
         useEffect(() => {
       
           const db = getFirestore();
           const itemCollection = db.collection("items");
+
+
+          const category = itemCollection.where('categoryId', '==', 'juguetes');
+          category.get().then((querySnapshot) =>{
+            if(querySnapshot.size === 0) {
+              console.log('no results');
+            }
+            setJuguetes(querySnapshot.docs.map(doc => doc.data()));
+          })
+          console.log(juguetes)
+
+
           itemCollection.get().then((querySnapshot) =>{
             const products = []
             querySnapshot.docs.forEach(doc =>{
@@ -36,7 +49,7 @@ export const DataContext = createContext();
         }, [])
     
         return(
-            <DataContext.Provider value= {{listOfItems}}>
+            <DataContext.Provider value= {{listOfItems, juguetes}}>
                 {children}
             </DataContext.Provider>
     )
