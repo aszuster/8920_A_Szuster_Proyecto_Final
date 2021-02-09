@@ -1,0 +1,66 @@
+.hero{
+    background-color: $terracota;
+    display:flex;
+
+    &__image{
+        background-image: url('../img/dog-human-happy.png');
+        width:100%;
+        height: 368px;
+        background-repeat: no-repeat;
+        background-size:cover;
+
+        @include breakpoint-up(large){
+        height: 600px;
+        }
+    }
+
+    &__button{
+        text-decoration: none;
+        background-color: $terracota;
+        color:$eggShell;
+        width: 150px;
+        height: 30px;
+        text-align: center;
+        border-radius: 50px;
+        padding:10px 20px 10px 20px;
+        margin: 15px 50px 25px 70%;
+
+        &:hover{
+            background-color:$blue;
+        }
+        transition:background-color 300ms ease-in-out;
+
+
+        @include breakpoint-up(large){
+            font-size:$font-medlg;
+            width:12rem;
+            height: 2rem;
+            padding-top:15px;
+            padding-bottom:10px;
+            margin: 50px 50px 25px 72%;
+            padding:15px 30px 15px 30px;
+
+       }
+
+
+    }
+
+    .heroText{
+        font-size: $font-lg;
+        font-family: $roboto;
+        color: $eggShell;
+        text-transform: uppercase;
+        width:200px;
+        margin: 50px 50px 25px 70%;
+        font-weight: 800;
+
+        @include breakpoint-up(large){
+             font-size:$font-xxlg;
+             width:18.75rem;
+             margin: 60px 50px 50px 72%;
+        }
+    }
+
+    
+
+}

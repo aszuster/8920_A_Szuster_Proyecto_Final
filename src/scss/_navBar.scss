@@ -1,14 +1,12 @@
 .header{
 
     width:100%;
-    background-color:#D4A787;
+    background-color:$green;
 
 .navBar{
     font-family: 'Roboto', sans-serif;
-    padding-top: 1.0625rem;
-    padding-bottom: 1.0625rem;
     position: relative;
-    color:#92140C;
+    color:$eggShell;
 
     &__brand{
         font-size: 1.5rem;
@@ -26,7 +24,7 @@
         font-size: 1.125rem;
 
         a{
-            color:#92140C;
+            color:$eggShell;
             padding:0.625rem;
             display:block;
             text-align:center;
@@ -36,11 +34,22 @@
             margin-right:1.875rem;
         }
     }
+
+    .link{
+        transition: color 300ms ease-in-out;
+        cursor:pointer;
+        &:hover, &:focus{
+            color: $champagne;
+
+        }
+    }
 }
 
-.icon{
+.cartIcon{
     width: 3.7rem;
     height: auto;
 }
+
+
 
 }
